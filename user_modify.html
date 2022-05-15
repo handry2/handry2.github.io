@@ -68,7 +68,7 @@
 							</a>
 							<div class="dropdown-menu" aria-labelledby="dropdownAccount">
 								<a class="dropdown-item" href="#">Profile</a>
-								<a class="dropdown-item" href="#">Logout</a>
+								<a class="dropdown-item" href="./index.html">Logout</a>
 							</div>
 						</li>
 
@@ -80,7 +80,7 @@
 
 					<ul class="navbar-nav d-none" id="menu-right">
 						<li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+						<li class="nav-item"><a href="./index.html" class="nav-link">Logout</a></li>
 
 					</ul>
 
@@ -90,115 +90,116 @@
 			</div>
 		</nav>
     <!-- END nav -->
-	<br>
 	
 
-	<div class="container">
-		<div class="breadcumb">
-		<b class="header_title">USER MANAGEMENT</b>
-		</div>
-		
-	</div>
-	
 	<section class="vh-100 gradient-custom">
-	  <div class="container py-5">
-		<div class="row justify-content-center align-items-center h-100">
-		  <div class="col-12">
-			<div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-			  <div class="card-body p-4 p-md-5">
-				<h3 class="mb-4 pb-2 pb-md-0 mb-md-5">USER - Modify</h3>
-				<form>
-
+		<div class="container py-5">
+		  <div class="row justify-content-center align-items-center h-100">
+			<div class="col-lg-8 col-12">
+			  <div class="breadcumb">
+				  <b class="header_title">USER MANAGEMENT</b>
+			  </div>
+			  <br>
+			  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+				<div class="card-body p-4 p-md-5">
+  
+  
+  
 				  <div class="row">
-					<div class="col-md-6 mb-2">
-
-					  <div class="form-outline">
-						<label class="form-label" for="username">Username</label>
-						<input type="text" id="username" class="form-control form-control-lg input_text" value="Admin" disabled="true"/>
+					  <div class="col-md-12">
+						  <h5 class="mb-4 pb-2 pb-md-0 mb-md-5">MODIFY USER</h5>
 					  </div>
-
-					</div>
-					<!-- <div class="col-md-6 mb-2">
-
-					</div> -->
 				  </div>
-				  
-				  <div class="row">
-					<div class="col-md-6 mb-2">
-
-					  <div class="form-outline">
-						<label class="form-label" for="user">First Name</label>
-						<input type="text" id="firstName" value="First Name" class="form-control form-control-lg input_text" />
+				  <form>
+  
+					<div class="row form">
+					  <div class="col-md-12 mb-2">
+  
+						<div class="form-outline">
+						  <label class="form-label" for="username">User ID</label>
+						  <input type="text" id="username" class="form-control form-control-lg input_text" value="DEC001" disabled="true"/>
+						</div>
 					  </div>
-
-					</div>
-					<div class="col-md-6 mb-3">
-						<label class="form-label" for="lastName">Last Name</label>
-						<input type="text" id="lastName" value="Last Name" class="form-control form-control-lg input_text" />
-					</div>
-				  </div>
-				  
-				  <div class="row">
-					<div class="col-md-6 mb-2">
-
-					  <div class="form-outline">
-						<label class="form-label" for="organization">Organization ID</label>
-						<input type="text" id="organization" value="Indosat" class="form-control form-control-lg input_text" />
+					  
+					  <div class="col-md-12 mb-2">
+  
 					  </div>
-
 					</div>
-					<div class="col-md-6 mb-2">
-
-					</div>
-				  </div>
-
-
-				  <div class="row">
-					<div class="col-md-6 pb-2">
-
-					  <div class="form-outline">
-						<label class="form-label" for="emailAddress">Email</label>
-						<input type="email" id="emailAddress" value="admin@gmail.com" class="form-control form-control-lg input_text" />
+					
+					<div class="row form">
+					  <div class="col-md-12 mb-2">
+  
+						<div class="form-outline">
+						  <label class="form-label" for="user">Name</label>
+						  <input type="text" id="firstName" class="form-control form-control-lg input_text" value="Anthony Tan"/>
+						</div>
+  
 					  </div>
-
 					</div>
-					<div class="col-md-6 mb-2 pb-2">
-
-					  <div class="form-outline">
-						<label class="form-label" for="phoneNumber">Phone Number</label>
-						<input type="tel" id="phoneNumber" value="012-601122334" class="form-control form-control-lg input_text" />
+  
+					
+					<div class="row form">
+					  <div class="col-md-12">
+					  <label class="form-label select-label">User Group</label>
+						  <div>
+							  <input id="ioh" type="radio" name="group" value=1>
+							  <label class="radio_label" id="ioh_label" for="ioh">IOH</label>
+							  
+							  <input id="decom" type="radio" name="group" value=2 checked="true">
+							  <label class="radio_label" id="decom_label" for="decom">Decom</label>
+							  
+							  <input id="scrap" type="radio" name="group" value=3>
+							  <label class="radio_label" id="scrap_label" for="scrap">Scrap</label>
+						  </div>
+  
 					  </div>
-
 					</div>
-				  </div>
-
-				  <div class="row">
-					<div class="col-md-6">
-					<label class="form-label select-label">User Group</label>
-					  <select class="select form-control-lg input_text">
-						<option value="1">Choose option</option>
-						<option value="2" selected>IOH</option>
-						<option value="3">Decom</option>
-						<option value="4">Scrap</option>
-					  </select>
-
+  
+					<div class="row form">
+					  <div class="col-md-12">
+					  <label class="form-label select-label">Organization</label>
+						<select  class="select form-control-lg input_text org_dropdown">
+						  <option disabled hidden selected value="1">Choose Organization</option>
+						  <option value="2" selected>A001382 - PT CellSite</option>
+						  <option value="3">B118293 - PT Aspex</option>
+						  <option value="4">B283992 - PT Suntek</option>
+						</select>
+					  </div>
 					</div>
-				  </div>
-
-				  <div class="mt-4 pt-2 text-right">
-					<input class="btn btn-primary btn-lg" type="submit" value="Submit" />
-					<a href="./user_management.html" class="btn btn-primary btn-lg" type="submit">Cancel</a>
-				  </div>
-
-				</form>
+					<br>
+					
+					<div class="row form">
+					  <div class="col-md-12 pb-2">
+						<div class="form-outline">
+						  <label class="form-label" for="phoneNumber">Phone Number</label>
+						  <input type="tel" id="phoneNumber" class="form-control form-control-lg input_text" value="01260112233" />
+						</div>
+					  </div>
+					</div>
+  
+					<div class="row form">
+					  <div class="col-md-12 pb-2">
+  
+						<div class="form-outline">
+						  <label class="form-label" for="emailAddress">Email Address</label>
+						  <input type="email" id="emailAddress" class="form-control form-control-lg input_text" value="DEC001@gmail.com"/>
+						</div>
+					  </div>
+					</div>
+					<div class="mt-4 pt-2 text-right">
+					  <input class="btn btn-primary px-4" type="submit" value="Submit" />
+					  <a href="./user_management.html" class="btn btn-primary px-4" type="submit">Cancel</a>
+					</div>
+  
+				  </form>
+				</div>
 			  </div>
 			</div>
 		  </div>
 		</div>
-	  </div>
-	</section>
+	  </section>
 
-</body>
+	</body>
 
 
 

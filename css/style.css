@@ -8453,7 +8453,7 @@ h1, h2, h3, h4, h5,
     color: white;
 }
 .input_text {
-    width: 99% !important;
+    width: 100% !important;
 }
 
 /* basic styling */
@@ -8699,3 +8699,15 @@ h2 {
   }
 
   /* drop down list css end */
+  .datepicker_bar {
+    width: 100%;
+  }
+
+
+  .row.form {
+    padding-bottom: 20px;
+  }
+
+  .org_dropdown {
+    font-size: 15px;
+  }

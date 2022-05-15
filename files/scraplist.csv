@@ -1,0 +1,5 @@
+﻿Site ID,No. of Equipments,Decom Vendor,To Decom,Actual Decom,Scrap Vendor,To Pick Up,Actual Pick Up,Status
+C008009,20, PT Cellsite,6-Jun-22, 7-Jun-2022,PT Dexter,15-Jun-22,15-Jun-22,Completed
+C008015,15, PT Aspek,6-Jun-22, 6-Jun-2022,PT Tata,15-Jun-22,,Pending Scrap
+C008020,18, PT Aspek,6-Jun-22,,PT Tata,15-Jun-22,,Pending Decom
+C008030,30,PT Cellsite,10-Jun-22,,PT Tata,15-Jun-22,,New
