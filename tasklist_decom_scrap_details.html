@@ -136,7 +136,7 @@
 			
 								<div class="col-lg-4 col-6">
 									<input id="missing1" type="radio" name="match" value=0>
-									<label class="radio_label" id="missing_label1" for="missing1">Missing</label>
+									<label class="radio_label1" id="missing_label1" for="missing1">Missing</label>
 								</div>
 							</div>
 		
@@ -147,7 +147,7 @@
 									</div>
 								</div>
 								<div class="col-lg-4 col-12">
-									&#x1f441
+									<a data-toggle="modal" data-target="#viewUploadedPhoto" href="#">&#x1f441</a>
 									&#10006
 								</div>
 							</div>
@@ -375,6 +375,33 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	
 	</body>
+
+	<!-- View Upload Photo -->
+	<div  class="modal fade" id="viewUploadedPhoto" tabindex="-1" role="dialog" aria-labelledby="viewUploadedPhotoLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<h5 class="modal-title" id="viewUploadedPhotoLabel">Select Photo</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+			<!-- Content of modal view -->
+			<div class="modal-body">
+				<iframe id="iframe_upload_photo" frameBorder="0" src="./upload_photo_access_decom.html">
+			</div>
+
+			<!-- Modal footer not showing -->
+			<div class="modal-footer">
+			<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Save changes</button> -->
+			</div>
+		</div>
+		</div>
+	</div>
+
 
 
 </html>

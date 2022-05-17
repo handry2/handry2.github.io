@@ -133,7 +133,7 @@
 			
 								<div class="col-lg-4 col-6">
 									<input id="missing1" type="radio" name="match" value=0>
-									<label class="radio_label" id="missing_label1" for="missing1">Missing</label>
+									<label class="radio_label1" id="missing_label1" for="missing1">Missing</label>
 								</div>
 							</div>
 		
@@ -144,49 +144,8 @@
 									</div>
 								</div>
 								<div class="col-lg-4 col-12">
-									&#x1f441
+									<a data-toggle="modal" data-target="#viewUploadedPhoto" href="#">&#x1f441</a>
 									&#10006
-								</div>
-							</div>
-						  </div>
-						</div>
-					</div>
-				</div>
-				</div>
-		
-				<!-- card 2 -->
-				<div class="card mb-3">
-					<div class="card-body">
-					  <div class="d-flex flex-column flex-lg-row">
-						<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
-						<div class="row flex-fill">
-						  <div class="col-md-3 col-sm-12">
-							<h4 class="h5"><strong>Antenna2</strong></h4>
-							<span>Omnidirectional Antenna 2</span>
-							<!-- <span class="badge bg-success label_text">Some Descriptions</span> -->
-						  </div>
-						  <div class="col-md-4 col-sm-12 py-2">
-							<span class="badge bg-secondary label_text">Televes</span>
-							<span class="badge bg-secondary label_text">149983 DAT BOSS</span>
-							<span class="badge bg-secondary label_text">EQ000002</span>
-						  </div>
-		
-						  <div class="col-md-5 col-sm-12 py-2 text-lg-end">
-							<div class="row">
-								<div class="col-lg-4 col-6">
-									<input id="match2" type="radio" name="match2" value=1>
-									<label class="radio_label" id="match_label2" for="match2">Match</label>
-								</div>
-			
-								<div class="col-lg-4 col-6">
-									<input id="missing2" type="radio" name="match2" value=0 checked="true">
-									<label class="radio_label2" id="missing_label2" for="missing2">Missing</label>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<div class="form-field">
-									<input type="text" style="width: 100%;" class="search_bar form-control" placeholder="Enter Remark">
 								</div>
 							</div>
 						  </div>
@@ -302,6 +261,43 @@
 					</div>
 				</div>
 				</div>
+
+
+				<!-- card 6 -->
+				<div class="card mb-3">
+					<div class="card-body">
+					  <div class="d-flex flex-column flex-lg-row">
+						<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
+						<div class="row flex-fill">
+						  <div class="col-md-3 col-sm-12">
+							<h4 class="h5"><strong>RRU Power Cable1</strong></h4>
+							<span>Remote Radio Unit Power Cable 1</span>
+							<!-- <span class="badge bg-success label_text">Some Descriptions</span> -->
+						  </div>
+						  <div class="col-md-4 col-sm-12 py-2">
+							<span class="badge bg-secondary label_text">Huawei</span>
+							<span class="badge bg-secondary label_text">-48V DC</span>
+							<span class="badge bg-secondary label_text">RRPC2818W2</span>
+						  </div>
+		
+						  <div class="col-md-5 col-sm-12 py-2 text-lg-end">
+							<div class="row">
+								<div class="col-lg-4 col-6">
+									<input id="match6" type="radio" name="match6" value=1>
+									<label class="radio_label" id="match_label6" for="match6">Match</label>
+								</div>
+								<div class="col-lg-4 col-6">
+									<input id="missing6" type="radio" name="match6" value=0>
+									<label class="radio_label6" id="missing_label6" for="missing6">Missing</label>
+								</div>
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+
 	</div>
 
     <div class="container">
@@ -370,5 +366,32 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	
 	</body>
+
+	<!-- View Upload Photo -->
+	<div  class="modal fade" id="viewUploadedPhoto" tabindex="-1" role="dialog" aria-labelledby="viewUploadedPhotoLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<h5 class="modal-title" id="viewUploadedPhotoLabel">Select Photo</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+			<!-- Content of modal view -->
+			<div class="modal-body">
+				<iframe id="iframe_upload_photo" frameBorder="0" src="./uploaded_photo_access.html">
+			</div>
+
+			<!-- Modal footer not showing -->
+			<div class="modal-footer">
+			<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Save changes</button> -->
+			</div>
+		</div>
+		</div>
+	</div>
+
 
 </html>
