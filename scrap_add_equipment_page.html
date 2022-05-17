@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Task List</title>
+  	<title>Add Equipment Scrap</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- home page -->
@@ -53,10 +53,10 @@
 					<ul class="navbar-nav d-none d-lg-flex" id="menu-left">
 						<li class="nav-item"><a href="./tasklist.html" class="nav-link">Task List</a></li>
 						<li class="nav-item"><a href="./tasklist_decom_scrap.html" class="nav-link">Decom Task List</a></li>
-						<li class="nav-item"><a href="./tasklist_scrap.html" class="nav-link">Scrap Task List</a></li>
+						<li class="nav-item active"><a href="./tasklist_scrap.html" class="nav-link">Scrap Task List</a></li>
 						<li class="nav-item"><a href="./scraplist.html" class="nav-link">Enquiry</a></li>
 						<li class="nav-item"><a href="./upload_page.html" class="nav-link">file upload</a></li>
-						<li class="nav-item active"><a href="./user_management.html" class="nav-link">User Management</a></li>
+						<li class="nav-item"><a href="./user_management.html" class="nav-link">User Management</a></li>
 					</ul>
 
 					<ul class="navbar-nav d-none d-lg-flex">
@@ -97,17 +97,15 @@
 		  <div class="row justify-content-center align-items-center h-100">
 			<div class="col-lg-8 col-12">
 			  <div class="breadcumb">
-				  <b class="header_title">USER MANAGEMENT</b>
+				  <b class="header_title">SCRAP TASK LIST DETAILS</b>
 			  </div>
 			  <br>
 			  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
 				<div class="card-body p-4 p-md-5">
   
-  
-  
 				  <div class="row">
 					  <div class="col-md-12">
-						  <h5 class="mb-4 pb-2 pb-md-0 mb-md-5">MODIFY USER</h5>
+						  <h5 class="mb-4 pb-2 pb-md-0 mb-md-5">ADD EQUIPMENT</h5>
 					  </div>
 				  </div>
 				  <form>
@@ -116,8 +114,8 @@
 					  <div class="col-md-12 mb-2">
   
 						<div class="form-outline">
-						  <label class="form-label" for="username">User ID</label>
-						  <input type="text" id="username" class="form-control form-control-lg input_text" value="DEC001" disabled="true"/>
+                            <label for="equipment">Equipment</label><br>
+                            <input class ="input_text" type="text" id="equipment" name="equipment" placeholder="Enter Equiment"><br><br>
 						</div>
 					  </div>
 					  
@@ -125,78 +123,55 @@
   
 					  </div>
 					</div>
+
+
+                    <div class="row form">
+					  <div class="col-md-12 mb-2">
+  
+						<div class="form-outline">
+                            <label for="make">Description</label><br>
+                            <input class="input_text" type="text" id="make" name="make" placeholder="Enter Make"><br><br>
+						</div>
+  
+					  </div>
+					</div>
 					
 					<div class="row form">
 					  <div class="col-md-12 mb-2">
   
 						<div class="form-outline">
-						  <label class="form-label" for="user">Name</label>
-						  <input type="text" id="firstName" class="form-control form-control-lg input_text" value="Anthony Tan"/>
+                            <label for="make">Make</label><br>
+                            <input class="input_text" type="text" id="make" name="make" placeholder="Enter Make"><br><br>
 						</div>
   
 					  </div>
 					</div>
-  
-					
-					<div class="row form">
-					  <div class="col-md-12">
-					  <label class="form-label select-label">User Group</label>
-						  <div>
-							  <div class="row">
-									  <div class="col-sm-4 col-12">
-										  <input  id="ioh" type="radio" name="group" value=1>
-										  <label class="radio_label" id="ioh_label" for="ioh">IOH</label>
-									  </div>
 
-									  <div class="col-sm-4 col-12">
-										<input id="decom" type="radio" name="group" value=2 checked="true">
-										<label class="radio_label" id="decom_label" for="decom">Decom</label>
-									  </div>
-
-									  <div class="col-sm-4 col-12">
-										<input id="scrap" type="radio" name="group" value=3>
-										<label class="radio_label" id="scrap_label" for="scrap">Scrap</label>
-									  </div>
-							  </div>
-						  </div>
-  
-					  </div>
-					</div>
-  
 					<div class="row form">
-					  <div class="col-md-12">
-					  <label class="form-label select-label">Organization</label>
-						<select  class="select form-control-lg input_text org_dropdown">
-						  <option disabled hidden selected value="1">Choose Organization</option>
-						  <option value="2" selected>A001382 - PT CellSite</option>
-						  <option value="3">B118293 - PT Aspex</option>
-						  <option value="4">B283992 - PT Suntek</option>
-						</select>
-					  </div>
-					</div>
-					<br>
-					
-					<div class="row form">
-					  <div class="col-md-12 pb-2">
-						<div class="form-outline">
-						  <label class="form-label" for="phoneNumber">Phone Number</label>
-						  <input type="tel" id="phoneNumber" class="form-control form-control-lg input_text" value="01260112233" />
-						</div>
-					  </div>
-					</div>
-  
-					<div class="row form">
-					  <div class="col-md-12 pb-2">
+					  <div class="col-md-12 mb-2">
   
 						<div class="form-outline">
-						  <label class="form-label" for="emailAddress">Email Address</label>
-						  <input type="email" id="emailAddress" class="form-control form-control-lg input_text" value="DEC001@gmail.com"/>
+                            <label for="model">Model</label><br>
+                            <input class="input_text" type="text" id="model" name="model" placeholder="Enter Model"><br><br>
 						</div>
+  
 					  </div>
 					</div>
+
+					<div class="row form">
+					  <div class="col-md-12 mb-2">
+  
+						<div class="form-outline">
+                            <label for="serial_no">Serial No.</label><br>
+                            <input class="input_text" type="text" id="serial_no" name="serial_no" placeholder="Enter Serial No."><br><br>
+						</div>
+  
+					  </div>
+					</div>
+
 					<div class="mt-4 pt-2 text-right">
 					  <input class="btn btn-primary px-4" type="submit" value="Submit" />
-					  <a href="./user_management.html" class="btn btn-primary px-4" type="submit">Cancel</a>
+					  <a href="./tasklist_scrap_details.html" class="btn btn-primary px-4">Cancel</a>
 					</div>
   
 				  </form>
