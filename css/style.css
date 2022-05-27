@@ -3365,7 +3365,7 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
-
+  
 .nav-link {
   display: block;
   padding: 0.5rem 1rem; }
@@ -8397,6 +8397,11 @@ h1, h2, h3, h4, h5,
     height: 550px;
     width:100%;
   }
+  #iframe_warehouse_assign {
+    display:inline;
+    height: 400px;
+    width:100%;
+  }
   .view_img {
     width: 120px;
     height: 150px;
@@ -8722,7 +8727,22 @@ h2 {
     color: white;
     width: 100px;
   }
+<<<<<<< HEAD
 
   .h5 {
     width: min-content;
   }
+=======
+  
+  .warehouse-label {
+	  /*background-color: aquamarine;*/
+	  border-style: solid;
+	  border-radius: 10px;
+	  padding: 10px;
+  }
+  
+  .small-html-icon{
+	  padding: 5px;
+	  font-size: 25px;
+  }
+>>>>>>> f1a61ea97c7ad66e940bf34f8249553fb7a632bd
