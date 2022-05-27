@@ -8728,3 +8728,15 @@ h2 {
     color: white;
     width: 100px;
   }
+  
+  .warehouse-label {
+	  /*background-color: aquamarine;*/
+	  border-style: solid;
+	  border-radius: 10px;
+	  padding: 10px;
+  }
+  
+  .small-html-icon{
+	  padding: 5px;
+	  font-size: 25px;
+  }

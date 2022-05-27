@@ -31,68 +31,8 @@
 	</head>
 	<body>
 	<section class="ftco-section">
-		
-
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-
-			<div id="navbar" class="container-fluid">
-
-				<div class="d-flex w-100 justify-content-between d-xl-none">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" data-menu="#menu-left"
-						aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="fa fa-bars"></span> Menu
-					</button>
-
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav-account" data-menu="#menu-right"
-						aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="fa fa-user"></span>
-					</button>
-				</div>
-
-				<div class="container collapse navbar-collapse justify-content-between px-lg-5 d-none d-lg-flex" id="ftco-nav">
-					<ul class="navbar-nav d-none d-lg-flex" id="menu-left">
-						<li class="nav-item"><a href="./tasklist.html" class="nav-link">Task List</a></li>
-						<li class="nav-item"><a href="./tasklist_decom_scrap.html" class="nav-link">Decom Task List</a></li>
-						<li class="nav-item"><a href="./tasklist_scrap.html" class="nav-link">Scrap Task List</a></li>
-						<li class="nav-item"><a href="./scraplist.html" class="nav-link">Enquiry</a></li>
-						<li class="nav-item"><a href="./upload_page.html" class="nav-link">file upload</a></li>
-						<li class="nav-item"><a href="./user_management.html" class="nav-link">User Management</a></li>						
-						<li class="nav-item dropdown active"><a href="./warehouse_assign.html" data-toggle="dropdown" 
-							class="nav-link dropdown-toggle" id="dropdownWarehouse" aria-haspopup="true" aria-expanded="false">Temp</a>
-							<div class="dropdown-menu" aria-labelledby="dropdownAccount">
-								<a class="dropdown-item active" href="./warehouse_assign.html">Assign Warehouse</a>
-							</div>
-						</li>
-					</ul>
-
-					<ul class="navbar-nav d-none d-lg-flex">
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdownAccount" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								<i class="fa fa-user mr-1"></i>
-								Hi, Admin
-							</a>
-							<div class="dropdown-menu" aria-labelledby="dropdownAccount">
-								<a class="dropdown-item" href="#">Profile</a>
-								<a class="dropdown-item" href="./index.html">Logout</a>
-							</div>
-						</li>
-
-					</ul>
-				</div>
-
-				<div class="container collapse navbar-collapse justify-content-between px-lg-5 d-none" id="ftco-nav-account">
-
-					<ul class="navbar-nav d-none" id="menu-right">
-						<li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
-						<li class="nav-item"><a href="./index.html" class="nav-link">Logout</a></li>
-					</ul>
-
-				</div>
-
-
-			</div>
-		</nav>
+	<div id="includedNavbar"></div>
+	<br>
     <!-- END nav -->
 	<br>
 	<div class="container">	
@@ -380,6 +320,7 @@
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/LoadNavbar.js"></script>
 
 	<!-- js from table -->
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -404,54 +345,53 @@
 	<div  class="modal fade" id="AssignWarehouse" tabindex="-1" role="dialog" aria-labelledby="assignWarehouse" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 		<div class="modal-content">
-
-			<div class="modal-header">
+			<div class="modal-header" style="background-color:lightgray;">
+				<b class="header_title">Add Equipment</b>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-
 			<!-- Content of modal view -->
 			<div class="modal-body">
 				<!-- <iframe id="iframe_warehouse_assign" frameBorder="0" src="./warehouse_assign_select.html">	-->
-				<div style="padding-top: 40px; padding-left: 30px" class="container">
-			<b class="header_title">Add Equipment</b>
+				<div style=" padding-left: 30px" class="container">
 			<div class="form-outline">
-				<label class="form-label" for="username">Postal Code</label>
-				<input type="text" class="input_text" value="101" readonly/>
+				<label class="form-label" for="username">Postal Code</label><br>
+				<input type="text" value="101" style="margin-bottom:15px; width:75%" readonly/>
+				<a class="btn btn-primary px-4" type="button" href="#">Search</a>
 			</div>
 			<ul style="list-style-type: none;">
 				<li>
-					<label>
-							<input type="radio" name="warehouse_group" value="WH Gambir" checked>
+					<label class="warehouse-label">
+							<input type="radio" name="warehouse_group" class="radio-warehouse" value="WH Gambir" checked/>
 							WH Gambir				
 					</label>
 				</li>
 				<li>
-					<label>
-							<input type="radio" name="warehouse_group" value="WH Kebon Kelapa">
+					<label class="warehouse-label">
+							<input type="radio" name="warehouse_group" value="WH Kebon Kelapa"/>
 							WH Kebon Kelapa				
 					</label>
 				</li>
 				
 				<li>
-					<label>
-							<input type="radio" name="warehouse_group" value="WH North Petojo">
+					<label class="warehouse-label">
+							<input type="radio" name="warehouse_group" value="WH North Petojo"/>
 							WH North Petojo				
 					</label>
 				</li>
 				
 				<li>
-					<label>
-							<input type="radio" name="warehouse_group" value="WH Duri Pulo">
+					<label class="warehouse-label">
+							<input type="radio" name="warehouse_group" value="WH Duri Pulo"/>
 							WH Duri Pulo				
 					</label>
 				</li>
 				
 				<li>
-					<label>
-							<input type="radio" name="warehouse_group" value="WH Cideng">
-							WH Cideng			
+					<label class="warehouse-label">
+							<input type="radio" name="warehouse_group" value="WH Cideng"/>
+							WH Cideng
 					</label>
 				</li>
 			</ul>
