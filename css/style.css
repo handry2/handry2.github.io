@@ -3365,7 +3365,7 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
-
+  
 .nav-link {
   display: block;
   padding: 0.5rem 1rem; }
@@ -8395,6 +8395,11 @@ h1, h2, h3, h4, h5,
   #iframe_upload_photo {
     display:block;
     height: 550px;
+    width:100%;
+  }
+  #iframe_warehouse_assign {
+    display:inline;
+    height: 400px;
     width:100%;
   }
   .view_img {
