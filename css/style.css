@@ -8711,3 +8711,15 @@ h2 {
   .org_dropdown {
     font-size: 15px;
   }
+
+  .btn.btn-scrap {
+    background-color: var(--red);
+    color: white;
+    width: 100px;
+  }
+
+  .btn.btn-reuse {
+    background-color: var(--green);
+    color: white;
+    width: 100px;
+  }
