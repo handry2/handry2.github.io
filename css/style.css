@@ -8412,11 +8412,9 @@ h1, h2, h3, h4, h5,
   }
 
   .radio_label {
-    padding-right: 50px;
+    padding-right: 0px;
   }
-  .radio_container {
-    width: 40%
-  }
+
   .add_btn {
     width: 50px;
   }
@@ -8716,10 +8714,15 @@ h2 {
     background-color: var(--red);
     color: white;
     width: 100px;
+    height: 40px;
   }
 
   .btn.btn-reuse {
     background-color: var(--green);
     color: white;
     width: 100px;
+  }
+
+  .h5 {
+    width: min-content;
   }
