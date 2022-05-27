@@ -8727,13 +8727,7 @@ h2 {
     color: white;
     width: 100px;
   }
-<<<<<<< HEAD
 
-  .h5 {
-    width: min-content;
-  }
-=======
-  
   .warehouse-label {
 	  /*background-color: aquamarine;*/
 	  border-style: solid;
@@ -8745,4 +8739,13 @@ h2 {
 	  padding: 5px;
 	  font-size: 25px;
   }
->>>>>>> f1a61ea97c7ad66e940bf34f8249553fb7a632bd
+
+  .btn.tab_selected {
+    background-color: var(--gray-dark);
+    color:white;
+  }
+
+  .btn.tab {
+    background-color: gray;
+    color:white;
+  }
