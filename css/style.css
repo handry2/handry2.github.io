@@ -8720,6 +8720,7 @@ h2 {
     color: white;
     width: 100px;
     height: 40px;
+    margin-top: 8px;
   }
 
   .btn.btn-reuse {
@@ -8740,12 +8741,10 @@ h2 {
 	  font-size: 25px;
   }
 
-  .btn.tab_selected {
-    background-color: var(--gray-dark);
-    color:white;
-  }
-
   .btn.tab {
     background-color: gray;
     color:white;
+    padding-right:30px;
+    margin-bottom: 0px;
+    border-top-right-radius: 20px;
   }
