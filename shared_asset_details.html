@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="btn-group" data-toggle="buttons">
+    <label onClick="loadPartialDecom()" class="btn btn-primary tab active">
+      <input
+        style="visibility: hidden"
+        type="radio"
+        name="options"
+        id="option1"
+        checked
+      />Decom
+    </label>
+    <label onClick="loadPartialScrap()" class="btn btn-primary tab">
+      <input
+        style="visibility: hidden"
+        type="radio"
+        name="options"
+        id="option2"
+      />Scrap
+    </label>
+    <label onClick="loadPartialOEM()" class="btn btn-primary tab">
+      <input
+        style="visibility: hidden"
+        type="radio"
+        name="options"
+        id="option3"
+      />OEM
+    </label>
+    <label onClick="loadPartialNew()" class="btn btn-primary tab">
+      <input
+        style="visibility: hidden"
+        type="radio"
+        name="options"
+        id="option4"
+      />New
+    </label>
+  </div>
+</div>
+
+<div id="partialAsset"></div>
+
+<script src="js/loadAssetDetailsTabs.js"></script>
