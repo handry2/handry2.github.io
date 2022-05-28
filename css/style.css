@@ -8723,7 +8723,6 @@ h2 {
     height: 30px;
     margin-top: 8px;
     margin-bottom: 30px;
-    margin-left:15px;
   }
 
   .card.btn-reuse {
@@ -8734,7 +8733,6 @@ h2 {
     height: 30px;
     margin-top: 8px;
     margin-bottom: 30px;
-    margin-left:15px;
   }
 
   .warehouse-label {
@@ -8754,4 +8752,21 @@ h2 {
     color:white;
     padding-right:30px;
     margin-bottom: 0px;
+  }
+
+  .dropdown-classic {
+    border-color: #DCDCDC;
+    border-radius: 0px;
+    height:50px;
+    color: slategrey;
+  }
+
+  .status {
+    margin-top:10px;
+    font-weight: bold;
+    color: darkorange;
+  }
+
+  .status.completed{
+    color: var(--green);
   }
