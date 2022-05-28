@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Scrap List Enquiry</title>
+  	<title>Asset Enquiry</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- home page -->
@@ -42,7 +42,7 @@
 
 	<div class="container">
 		<div class="breadcumb">
-			<b class="header_title">SCRAP LIST ENQUIRY</b>
+			<b class="header_title">ASSET ENQUIRY</b>
 		</div>
 		<br>
 
@@ -65,16 +65,19 @@
 
 								<!-- With styling but option wont persist -->
 								<div class="dropdown custom-dropdown">
-									<a href="#" data-toggle="dropdown" class="dropdown-link" aria-haspopup="true" aria-expanded="false">
-										<span class="icon-arrow-circle-o-down mr-3"></span><span id="status_bar">Status</span>
-									</a>
-	
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-										<a id="status1" class="status_menu_item dropdown-item" value="1">New</a>
-										<a id="status2" class="status_menu_item dropdown-item" value="2">Pending Decom</a>
-										<a id="status3" class="status_menu_item dropdown-item" value="3">Pending Scrap</a>
-										<a id="status4" class="status_menu_item dropdown-item" value="4">Completed</a>
-									  </div>
+
+								<div class="row form">
+								<div class="col-md-12">
+									<select class="select form-control-lg input_text org_dropdown dropdown-classic">
+									<option disabled hidden selected value="1">Status</option>
+									<option>New</option>
+									<option>Pending Decom</option>
+									<option>Pending Scrap/OEM</option>
+									<option>Partial Complete</option>
+									<option>Completed</option>
+									</select>
+								</div>
+								</div>
 								</div>
 
 							  </div>
@@ -115,15 +118,18 @@
 			<div class="d-flex flex-column flex-lg-row">
 			  <!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 			  <div class="row flex-fill">
-				<div class="col-sm-6">
+				<div class="col-lg-4 col-6">
 				  <span>SITE ID</span>
 				  <h4 class="h5"><strong><a href="./scraplist_details.html" class="name">C008009</a></strong></h4>
 				  <!-- <span class="badge bg-success label_text">Some Descriptions</span> -->
 				</div>
-				<div class="col-sm-6 py-2">
-				  <!-- <span class="badge bg-secondary label_text">Antenna1</span> -->
+				<div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 				  <span class="badge bg-secondary label_text">PT Cellsite</span>
 				  <span class="badge bg-secondary label_text">PT Dexter</span>
+				  <span class="badge bg-secondary label_text">PT Ascendtech</span>
+				</div>
+				<div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status completed">Completed</span>
 				</div>
 			  </div>
 			</div>
@@ -135,14 +141,17 @@
 			  <div class="d-flex flex-column flex-lg-row">
 				<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 				<div class="row flex-fill">
-				  <div class="col-sm-6">
+				  <div class="col-lg-4 col-6">
 					<span>SITE ID</span>
 					<h4 class="h5"><strong><a href="#" class="name">C008015</a></strong></h4>
 				  </div>
-				  <div class="col-sm-6 py-2">
+				  <div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 					  <span class="badge bg-secondary label_text">PT Aspex</span>
 					  <span class="badge bg-secondary label_text">PT Tata</span>
 				  </div>
+				  <div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status">Pending Decom</span>
+				  </div>
 				</div>
 			  </div>
 			</div>
@@ -153,14 +162,17 @@
 			  <div class="d-flex flex-column flex-lg-row">
 				<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 				<div class="row flex-fill">
-				  <div class="col-sm-6">
+				  <div class="col-lg-4 col-6">
 					<span>SITE ID</span>
 					<h4 class="h5"><strong><a href="#" class="name">C008020</a></strong></h4>
 				  </div>
-				  <div class="col-sm-6 py-2">
+				  <div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 					  <span class="badge bg-secondary label_text">PT Aspex</span>
 					  <span class="badge bg-secondary label_text">PT Dexter</span>
 				  </div>
+				  <div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status">Pending Scrap/OEM</span>
+				  </div>
 				</div>
 			  </div>
 			</div>
@@ -171,13 +183,16 @@
 			  <div class="d-flex flex-column flex-lg-row">
 				<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 				<div class="row flex-fill">
-				  <div class="col-sm-6">
+				  <div class="col-lg-4 col-6">
 					<span>SITE ID</span>
 					<h4 class="h5"><strong><a href="#" class="name">C008030</a></strong></h4>
 				  </div>
-				  <div class="col-sm-6 py-2">
+				  <div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 					<span class="badge bg-secondary label_text">PT Cellsite</span>
 					<span class="badge bg-secondary label_text">PT Dexter</span>
+				  </div>
+				  <div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status">Pending Complete</span>
 				  </div>
 				</div>
 			  </div>
@@ -189,13 +204,16 @@
 			  <div class="d-flex flex-column flex-lg-row">
 				<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 				<div class="row flex-fill">
-				  <div class="col-sm-6">
+				  <div class="col-lg-4 col-6">
 					<span>SITE ID</span>
 					<h4 class="h5"><strong><a href="#" class="name">C008040</a></strong></h4>
 				  </div>
-				  <div class="col-sm-6 py-2">
+				  <div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 					<span class="badge bg-secondary label_text">PT Suntek</span>
 					<span class="badge bg-secondary label_text">PT Panjiva</span>
+				  </div>
+				  <div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status">Pending Complete</span>
 				  </div>
 				</div>
 			  </div>
@@ -207,14 +225,17 @@
 			  <div class="d-flex flex-column flex-lg-row">
 				<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 				<div class="row flex-fill">
-				  <div class="col-sm-6">
+				  <div class="col-lg-4 col-6">
 					<span>SITE ID</span>
 					<h4 class="h5"><strong><a href="#" class="name">C008055</a></strong></h4>
 				  </div>
-				  <div class="col-sm-6 py-2">
+				  <div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 					<span class="badge bg-secondary label_text">PT Aspex</span>
 					<span class="badge bg-secondary label_text">PT Tata</span>
 				  </div>
+				  <div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status">Pending Scrap/OEM</span>
+				  </div>
 				</div>
 			  </div>
 			</div>
@@ -225,14 +246,17 @@
 			  <div class="d-flex flex-column flex-lg-row">
 				<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 				<div class="row flex-fill">
-				  <div class="col-sm-6">
+				  <div class="col-lg-4 col-6">
 					<span>SITE ID</span>
 					<h4 class="h5"><strong><a href="#" class="name">C008066</a></strong></h4>
 				  </div>
-				  <div class="col-sm-6 py-2">
+				  <div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 					<span class="badge bg-secondary label_text">PT Suntek</span>
 					<span class="badge bg-secondary label_text">PT Tata</span>
 				  </div>
+				  <div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status">Pending Scrap/OEM</span>
+				  </div>
 				</div>
 			  </div>
 			</div>
@@ -243,14 +267,17 @@
 			  <div class="d-flex flex-column flex-lg-row">
 				<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 				<div class="row flex-fill">
-				  <div class="col-sm-6">
+				  <div class="col-lg-4 col-6">
 					<span>SITE ID</span>
 					<h4 class="h5"><strong><a href="#" class="name">N001010</a></strong></h4>
 				  </div>
-				  <div class="col-sm-6 py-2">
+				  <div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 					  <span class="badge bg-secondary label_text">PT Suntek</span>
 					  <span class="badge bg-secondary label_text">PT Panjiva</span>
 				  </div>
+				  <div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status">Pending Scrap/OEM</span>
+				  </div>
 				</div>
 			  </div>
 			</div>
@@ -261,13 +288,16 @@
 			  <div class="d-flex flex-column flex-lg-row">
 				<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 				<div class="row flex-fill">
-				  <div class="col-sm-6">
+				  <div class="col-lg-4 col-6">
 					<span>SITE ID</span>
 					<h4 class="h5"><strong><a href="#" class="name">N001022</a></strong></h4>
 				  </div>
-				  <div class="col-sm-6 py-2">
+				  <div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 					<span class="badge bg-secondary label_text">PT Cellsite</span>
 					<span class="badge bg-secondary label_text">PT Dexter</span>
+				  </div>
+				  <div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status">Pending Decom</span>
 				  </div>
 				</div>
 			  </div>
@@ -279,13 +309,16 @@
 			  <div class="d-flex flex-column flex-lg-row">
 				<!-- <span class="avatar avatar-text rounded-3 me-4 mb-2">Antenna1</span> -->
 				<div class="row flex-fill">
-				  <div class="col-sm-6">
+				  <div class="col-lg-4 col-6">
 					<span>SITE ID</span>
 					<h4 class="h5"><strong><a href="#" class="name">N001045</a></strong></h4>
 				  </div>
-				  <div class="col-sm-6 py-2">
+				  <div class="col-lg-4 col-12 py-2 order-2 order-lg-1">
 					<span class="badge bg-secondary label_text">PT Suntek</span>
 					<span class="badge bg-secondary label_text">PT Panjiva</span>
+				  </div>
+				  <div class="col-lg-4 col-6 order-1 order-lg-2">
+					<span class="status">Pending Decom</span>
 				  </div>
 				</div>
 			  </div>
