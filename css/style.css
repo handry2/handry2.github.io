@@ -8770,3 +8770,32 @@ h2 {
   .status.completed{
     color: var(--green);
   }
+  
+  .f13 {
+  font-size: 12px; }
+  
+  /* create new button css for tab */
+  .btn-primary-tab {
+  color: #fff;
+  background-color: #B20600;
+  border-color: black; }
+  .btn-primary-tab:hover {
+    color: #fff;
+    background-color: #00092C;
+    border-color: #00092C; }
+  .btn-primary-tab:focus, .btn-primary-tab.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgb(238, 238, 238, 0.5);
+    box-shadow: 0 0 0 0.2rem rgb(238, 238, 238, 0.5); }
+  .btn-primary-tab.disabled, .btn-primary-tab:disabled {
+    color: #fff;
+    background-color: #B20600;
+    border-color: #B20600; }
+  .btn-primary-tab:not(:disabled):not(.disabled):active, .btn-primary-tab:not(:disabled):not(.disabled).active,
+  .show > .btn-primary-tab.dropdown-toggle {
+    color: #fff;
+    background-color: #00092C;
+    border-color: #00092C; }
+    .btn-primary-tab:not(:disabled):not(.disabled):active:focus, .btn-primary-tab:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-primary-tab.dropdown-toggle:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem rgb(238, 238, 238, 0.5);
+      box-shadow: 0 0 0 0.2rem rgb(238, 238, 238, 0.5); }

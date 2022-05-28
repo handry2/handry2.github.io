@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- home page -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+
+	<!-- table (makes no difference) -->
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/style.css"> -->
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // Radialize the colors
+            Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
+                return {
+                    radialGradient: {
+                        cx: 0.5,
+                        cy: 0.3,
+                        r: 0.7
+                    },
+                    stops: [
+                        [0, color],
+                        [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+                    ]
+                };
+            });
+			
+			var colors = ['#2f7ed8', '#f28f43', '#FF0000', '#E80C7A', '#E80C7A'];
+			var colors2 = ['#f28f43', '#2f7ed8', '#FF0000', '#E80C7A', '#E80C7A'];
+			
+            var chartype = {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            }
+            var chartitle = {
+                text: 'Decom Vendor SLA'
+            }
+			
+			var chartitle2 = {
+                text: 'Scrap Vendor SLA'
+            }
+			
+			var chartitle3 = {
+                text: 'OEM Vendor SLA'
+            }
+			
+            var chartooltip = {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            }
+            var chartplotoptions = {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        },
+                        connectorColor: 'silver'
+                    }
+                }
+            }
+            var chartseries = [{
+                name: 'Percentage',
+                data: [
+                    { name: 'Within SLA', y: 93 },
+                    {
+                        name: 'Exceed SLA',
+                        y: 7,
+                        sliced: true,
+                        selected: true
+                    }
+                ]
+            }]
+			
+			 var chartseries2 = [{
+                name: 'Percentage',
+                data: [
+                    { name: 'Within SLA', y: 79 },
+                    {
+                        name: 'Exceed SLA',
+                        y: 21,
+                        sliced: true,
+                        selected: true
+                    }
+                ]
+            }]
+			
+			 var chartseries3 = [{
+                name: 'Percentage',
+                data: [
+                    { name: 'Within SLA', y: 88 },
+                    {
+                        name: 'Exceed SLA',
+                        y: 12,
+                        sliced: true,
+                        selected: true
+                    }
+                ]
+            }]
+            $('#slaDecom').highcharts({
+                chart:chartype,
+                title: chartitle,
+                tooltip: chartooltip,
+                plotOptions: chartplotoptions,
+                series: chartseries,
+				colors: colors
+            });
+			
+			 $('#slaScrap').highcharts({
+                chart:chartype,
+                title: chartitle2,
+                tooltip: chartooltip,
+                plotOptions: chartplotoptions,
+                series: chartseries2,
+				colors: colors
+            });
+			
+			$('#slaOEM').highcharts({
+                chart:chartype,
+                title: chartitle3,
+                tooltip: chartooltip,
+                plotOptions: chartplotoptions,
+                series: chartseries3,
+				colors: colors
+            });
+			
+			var chartype = {
+                type: 'column'
+            }
+            var chartitle = {
+                text: 'Chart'
+            }
+            var chartxaxis = {
+                categories: ['Team 1', 'Team 2', 'Team 3', 'Team 4', 'Team 5', 'Team 6', 'Team 7', 'Team 8', 'Team 9', 'Team 10']
+            }
+			
+			var chartxaxis2 = {
+                categories: ['Team 1', 'Team 2', 'Team 3', 'Team 7', 'Team 8']
+            }
+			
+            var chartyaxis = {
+                min: 0,
+                title: {
+                    text: ''
+                },
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                    }
+                }
+            }
+            var chartlegend = {
+                align: 'right',
+                x: -30,
+                verticalAlign: 'top',
+                y: 25,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                borderColor: '#CCC',
+                borderWidth: 1,
+                shadow: false
+            }
+            var chartooltip = {
+                headerFormat: '<b>{point.x}</b><br/>',
+                pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+            }
+            var chartplotoptions = {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                        style: {
+                            textShadow: '0 0 3px black'
+                        }
+                    }
+                }
+            }
+            var chartseries = [{
+                name: 'Exceed SLA',
+                data: [15, 17, 2, 25, 5,9,20,35,27,0]
+            },{
+                name: 'Within SLA',
+                data: [50, 100, 250, 382, 267,159,273,126,273,125]
+            }]
+			
+			var chartseries2 = [{
+                name: 'Exceed SLA',
+                data: [50, 20, 70, 63, 42,57,2,9,7,28]
+            },{
+                name: 'Within SLA',
+                data: [90, 80, 150, 178, 199,165,128,88,128,135]
+            }]
+			
+			var chartseries3 = [{
+                name: 'Exceed SLA',
+                data: [3, 2, 0, 17, 26]
+            },{
+                name: 'Within SLA',
+                data: [50, 73, 29, 101, 97]
+            }]
+			
+            $('#slaTDecom').highcharts({
+                chart:chartype,
+                title: chartitle,
+                xAxis: chartxaxis,
+                yAxis:chartyaxis,
+                tooltip:chartooltip,
+                plotOptions:chartplotoptions,
+                series: chartseries,
+				colors: colors2
+            });
+			
+			$('#slaTScrap').highcharts({
+                chart:chartype,
+                title: chartitle,
+                xAxis: chartxaxis,
+                yAxis:chartyaxis,
+                tooltip:chartooltip,
+                plotOptions:chartplotoptions,
+                series: chartseries2,
+				colors: colors2
+            });
+			
+			$('#slaTOEM').highcharts({
+                chart:chartype,
+                title: chartitle,
+                xAxis: chartxaxis2,
+                yAxis:chartyaxis,
+                tooltip:chartooltip,
+                plotOptions:chartplotoptions,
+                series: chartseries3,
+				colors: colors2
+            });
+			
+			document.getElementById("slaDecom").style.display = "block";
+			document.getElementById("slaScrap").style.display = "none";
+			document.getElementById("slaOEM").style.display = "none";
+			
+			document.getElementById("slaTDecom").style.display = "block";
+			document.getElementById("slaTScrap").style.display = "none";
+			document.getElementById("slaTOEM").style.display = "none";
+			
+			document.getElementById("decomTable").style.display = "block";
+			document.getElementById("scrapTable").style.display = "none";
+			document.getElementById("oemTable").style.display = "none";
+        });
+		
+		function enableSLADecom() {
+			document.getElementById("slaDecom").style.display = "block";
+			document.getElementById("slaScrap").style.display = "none";
+			document.getElementById("slaOEM").style.display = "none";
+		};
+		
+		function enableSLAScrap() {
+			document.getElementById("slaDecom").style.display = "none";
+			document.getElementById("slaScrap").style.display = "block";
+			document.getElementById("slaOEM").style.display = "none";
+		};
+		
+		function enableSLAOEM() {
+			document.getElementById("slaDecom").style.display = "none";
+			document.getElementById("slaScrap").style.display = "none";
+			document.getElementById("slaOEM").style.display = "block";
+		};
+		
+		function enableTSLADecom() {
+			document.getElementById("slaTDecom").style.display = "block";
+			document.getElementById("slaTScrap").style.display = "none";
+			document.getElementById("slaTOEM").style.display = "none";
+		};
+		
+		function enableTSLAScrap() {
+			document.getElementById("slaTDecom").style.display = "none";
+			document.getElementById("slaTScrap").style.display = "block";
+			document.getElementById("slaTOEM").style.display = "none";
+		};
+		
+		function enableTSLAOEM() {
+			document.getElementById("slaTDecom").style.display = "none";
+			document.getElementById("slaTScrap").style.display = "none";
+			document.getElementById("slaTOEM").style.display = "block";
+		};
+		
+		function enableTDecom() {
+			document.getElementById("decomTable").style.display = "block";
+			document.getElementById("scrapTable").style.display = "none";
+			document.getElementById("oemTable").style.display = "none";
+		};
+		
+		function enableTScrap() {
+			document.getElementById("decomTable").style.display = "none";
+			document.getElementById("scrapTable").style.display = "block";
+			document.getElementById("oemTable").style.display = "none";
+		};
+		
+		function enableTOEM() {
+			document.getElementById("decomTable").style.display = "none";
+			document.getElementById("scrapTable").style.display = "none";
+			document.getElementById("oemTable").style.display = "block";
+		};
+		
+		
+		
+		
+    </script>
+
+
+	</head>
+	<body>
+
+
+	<section class="ftco-section">
+		
+
+	<div id="includedNavbar"></div>
+    <!-- END nav -->
+	<br>
+	<div class="container">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+					<div class="row">
+
+                            <!-- ============================================================== -->
+                      
+                            <!-- ============================================================== -->
+
+                                          <!-- recent orders  -->
+                            <!-- ============================================================== -->
+							<div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        <!-- <div class="float-right">
+                                                <select class="custom-select">
+                                                    <option selected>Today</option>
+                                                    <option value="1">Weekly</option>
+                                                    <option value="2">Monthly</option>
+                                                    <option value="3">Yearly</option>
+                                                </select>
+                                            </div> -->
+                                        <h5 class="mb-0"> SLA Chart</h5>
+                                    </div>
+                                    <div class="card-body">
+
+										  <div class="btn-group" data-toggle="buttons">
+											<label onClick="enableSLADecom()" class="btn btn-primary-tab tab active">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option1" checked>Decom
+											</label>
+											<label onClick="enableSLAScrap()" class="btn btn-primary-tab tab">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option2">Scrap
+											</label>
+											<label onClick="enableSLAOEM()" class="btn btn-primary-tab tab">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option2">OEM
+											</label>
+										  </div>
+
+                                        <div id="slaDecom" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+										<div id="slaScrap" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+										<div id="slaOEM" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+					<div class="row">
+                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card mb-3">
+                                    <h5 class="card-header">SLA by Team</h5>
+                                    <div class="card-body p-0">
+									
+										<div class="btn-group" data-toggle="buttons">
+											<label onClick="enableTSLADecom()" class="btn btn-primary-tab tab active">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option1" checked>Decom
+											</label>
+											<label onClick="enableTSLAScrap()" class="btn btn-primary-tab tab">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option2">Scrap
+											</label>
+											<label onClick="enableTSLAOEM()" class="btn btn-primary-tab tab">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option2">OEM
+											</label>
+										  </div>
+										  
+                                        <div id="slaTDecom" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+										<div id="slaTScrap" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+										<div id="slaTOEM" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+					</div>			
+							
+                            <!-- ============================================================== -->
+                            <!-- end product sales  -->
+                            <!-- ============================================================== -->
+                            
+                        <div class="row">
+                            <!-- ============================================================== -->
+                      
+                            <!-- ============================================================== -->
+
+                                          <!-- recent orders  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card mb-3">
+                                    <h5 class="card-header">Team SLA Overview</h5>
+                                    <div class="card-body p-0">
+									
+									<div class="btn-group" data-toggle="buttons">
+											<label onClick="enableTDecom()" class="btn btn-primary-tab tab active">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option1" checked>Decom
+											</label>
+											<label onClick="enableTScrap()" class="btn btn-primary-tab tab">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option2">Scrap
+											</label>
+											<label onClick="enableTOEM()" class="btn btn-primary-tab tab">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option2">OEM
+											</label>
+									</div>
+                                        <div id="decomTable" class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">Vendor</th>
+                                                        <th class="border-0">Team</th>
+                                                        <th class="border-0">Within SLA</th>
+                                                        <th class="border-0">Exceed SLA</th>
+                                                        <th class="border-0">Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="py-2 f13">PT Cellsite</td>
+                                                        <td class="py-2 f13">Team 1</td>
+                                                        <td class="py-2 f13">50</td>
+                                                        <td class="py-2 f13">15</td>
+                                                        <td class="py-2 f13">65</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 2</td>
+                                                        <td class="py-2 f13">100</td>
+                                                        <td class="py-2 f13">17</td>
+                                                        <td class="py-2 f13">117</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 3</td>
+                                                        <td class="py-2 f13">250</td>
+                                                        <td class="py-2 f13">2</td>
+                                                        <td class="py-2 f13">252</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 4</td>
+                                                        <td class="py-2 f13">382</td>
+                                                        <td class="py-2 f13">25</td>
+                                                        <td class="py-2 f13">407</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 5</td>
+                                                        <td class="py-2 f13">267</td>
+                                                        <td class="py-2 f13">5</td>
+                                                        <td class="py-2 f13">272</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 6</td>
+                                                        <td class="py-2 f13">159</td>
+                                                        <td class="py-2 f13">9</td>
+                                                        <td class="py-2 f13">168</td>
+                                                    </tr>
+													 <tr>
+                                                        <td class="py-2 f13">PT Aspek</td>
+                                                        <td class="py-2 f13">Team 7</td>
+                                                        <td class="py-2 f13">273</td>
+                                                        <td class="py-2 f13">20</td>
+                                                        <td class="py-2 f13">293</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 8</td>
+                                                        <td class="py-2 f13">126</td>
+                                                        <td class="py-2 f13">35</td>
+                                                        <td class="py-2 f13">161</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 9</td>
+                                                        <td class="py-2 f13">273</td>
+                                                        <td class="py-2 f13">27</td>
+                                                        <td class="py-2 f13">300</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 10</td>
+                                                        <td class="py-2 f13">125</td>
+                                                        <td class="py-2 f13">0</td>
+                                                        <td class="py-2 f13">125</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Total</td>
+                                                        <td class="py-2 f13">2005</td>
+                                                        <td class="py-2 f13">155</td>
+                                                        <td class="py-2 f13">2160</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+										
+										<div id="scrapTable" class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">Vendor</th>
+                                                        <th class="border-0">Team</th>
+                                                        <th class="border-0">Within SLA</th>
+                                                        <th class="border-0">Exceed SLA</th>
+                                                        <th class="border-0">Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="py-2 f13">PT Dexter</td>
+                                                        <td class="py-2 f13">Team 1</td>
+                                                        <td class="py-2 f13">90</td>
+                                                        <td class="py-2 f13">50</td>
+                                                        <td class="py-2 f13">140</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 2</td>
+                                                        <td class="py-2 f13">80</td>
+                                                        <td class="py-2 f13">20</td>
+                                                        <td class="py-2 f13">100</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 3</td>
+                                                        <td class="py-2 f13">150</td>
+                                                        <td class="py-2 f13">70</td>
+                                                        <td class="py-2 f13">220</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 4</td>
+                                                        <td class="py-2 f13">178</td>
+                                                        <td class="py-2 f13">63</td>
+                                                        <td class="py-2 f13">241</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13">PT Tata</td>
+                                                        <td class="py-2 f13">Team 5</td>
+                                                        <td class="py-2 f13">199</td>
+                                                        <td class="py-2 f13">42</td>
+                                                        <td class="py-2 f13">241</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 6</td>
+                                                        <td class="py-2 f13">165</td>
+                                                        <td class="py-2 f13">57</td>
+                                                        <td class="py-2 f13">222</td>
+                                                    </tr>
+													 <tr>
+                                                        <td class="py-2 f13">PT Panjiva</td>
+                                                        <td class="py-2 f13">Team 7</td>
+                                                        <td class="py-2 f13">128</td>
+                                                        <td class="py-2 f13">2</td>
+                                                        <td class="py-2 f13">130</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 8</td>
+                                                        <td class="py-2 f13">88</td>
+                                                        <td class="py-2 f13">9</td>
+                                                        <td class="py-2 f13">16971</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 9</td>
+                                                        <td class="py-2 f13">128</td>
+                                                        <td class="py-2 f13">7</td>
+                                                        <td class="py-2 f13">135</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 10</td>
+                                                        <td class="py-2 f13">135</td>
+                                                        <td class="py-2 f13">28</td>
+                                                        <td class="py-2 f13">163</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Total</td>
+                                                        <td class="py-2 f13">1341</td>
+                                                        <td class="py-2 f13">348</td>
+                                                        <td class="py-2 f13">1689</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+										
+										<div id="oemTable" class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">Vendor</th>
+                                                        <th class="border-0">Team</th>
+                                                        <th class="border-0">Within SLA</th>
+                                                        <th class="border-0">Exceed SLA</th>
+                                                        <th class="border-0">Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="py-2 f13">PT Ascendtech</td>
+                                                        <td class="py-2 f13">Team 1</td>
+                                                        <td class="py-2 f13">50</td>
+                                                        <td class="py-2 f13">3</td>
+                                                        <td class="py-2 f13">53</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 2</td>
+                                                        <td class="py-2 f13">73</td>
+                                                        <td class="py-2 f13">2</td>
+                                                        <td class="py-2 f13">75</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 3</td>
+                                                        <td class="py-2 f13">29</td>
+                                                        <td class="py-2 f13">0</td>
+                                                        <td class="py-2 f13">29</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13">PT Rodiva</td>
+                                                        <td class="py-2 f13">Team 7</td>
+                                                        <td class="py-2 f13">101</td>
+                                                        <td class="py-2 f13">17</td>
+                                                        <td class="py-2 f13">118</td>
+                                                    </tr>
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Team 8</td>
+                                                        <td class="py-2 f13">97</td>
+                                                        <td class="py-2 f13">26</td>
+                                                        <td class="py-2 f13">123</td>
+                                                    </tr>
+													
+													<tr>
+                                                        <td class="py-2 f13"></td>
+                                                        <td class="py-2 f13">Total</td>
+                                                        <td class="py-2 f13">350</td>
+                                                        <td class="py-2 f13">48</td>
+                                                        <td class="py-2 f13">398</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end recent orders  -->
+                        </div>
+						
+                            <!-- ============================================================== -->
+                            <!-- end recent orders  -->
+                        </div>
+                       
+
+                        
+        </div>
+  
+	
+
+	</section>
+
+	<!-- js from homepage -->
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/LoadNavbar.js"></script>
+	
+	</body>
+</html>
+
