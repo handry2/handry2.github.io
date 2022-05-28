@@ -8715,18 +8715,26 @@ h2 {
     font-size: 15px;
   }
 
-  .btn.btn-scrap {
+  .card.btn-scrap {
     background-color: var(--red);
     color: white;
     width: 100px;
-    height: 40px;
+    text-align: center;
+    height: 30px;
     margin-top: 8px;
+    margin-bottom: 30px;
+    margin-left:15px;
   }
 
-  .btn.btn-reuse {
+  .card.btn-reuse {
     background-color: var(--green);
     color: white;
     width: 100px;
+    text-align: center;
+    height: 30px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    margin-left:15px;
   }
 
   .warehouse-label {
@@ -8746,5 +8754,4 @@ h2 {
     color:white;
     padding-right:30px;
     margin-bottom: 0px;
-    border-top-right-radius: 20px;
   }
