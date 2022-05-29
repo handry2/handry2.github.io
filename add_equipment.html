@@ -1,31 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Equipment</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <form action="/action_page.php">
+  <head>
+  	<title>Add Equipment Scrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- home page -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
-        <div class="input_fields">
-            <label for="equipment">Equipment</label><br>
-            <input class ="input_text" type="text" id="equipment" name="equipment" placeholder="Enter Equipment"><br><br>
-            <label for="make">Make</label><br>
-            <input class="input_text" type="text" id="make" name="make" placeholder="Enter Make"><br><br>
-            <label for="model">Model</label><br>
-            <input class="input_text" type="text" id="model" name="model" placeholder="Enter Model"><br><br>
-            <label for="serial_no">Serial No.</label><br>
-            <input class="input_text" type="text" id="serial_no" name="serial_no" placeholder="Enter Serial No."><br><br>
-        </div>
-        
-        <div class="myButtons">
-            <a class="btn btn-primary px-4" href="#">Submit</a>
-            <a class="btn btn-primary px-4" href="#">Cancel</a>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+    
+        <div>
+
+			  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+				<div class="card-body p-4 p-md-5">
+  
+				  <div class="row">
+					  <div class="col-md-12">
+						  <h5 class="mb-4 pb-2 pb-md-0 mb-md-5">ADD EQUIPMENT</h5>
+					  </div>
+				  </div>
+				  <form>
+  
+					<div class="row form">
+					<div class="col-md-12 pb-2">
+
+					  <div class="form-outline">
+						<label class="form-label" for="phoneNumber">Equipment</label>
+						<input type="tel" id="phoneNumber" class="form-control form-control-lg input_text" placeholder="Enter Equipment"/>
+					  </div>
+
+					</div>
+				  </div>
+
+
+					<div class="row form">
+					<div class="col-md-12 pb-2">
+
+					  <div class="form-outline">
+						<label class="form-label" for="phoneNumber">Description</label>
+						<input type="tel" id="phoneNumber" class="form-control form-control-lg input_text" placeholder="Enter Description"/>
+					  </div>
+
+					</div>
+				  </div>
+
+
+				<div class="row form">
+				<div class="col-md-12">
+				<label class="form-label select-label">Make</label>
+					<select id="make_dropdown" class="select form-control-lg input_text org_dropdown dropdown-classic">
+						<option name="make" disabled hidden selected value="1">Select Make</option>
+						<option name="make" value="compower">Com-Power</option>
+						<option name="make" value="ericsson">Ericsson</option>
+						<option name="make" value="nokia">Nokia</option>
+						<option name="make" value="televes">Televes</option>
+						<option name="make" value="others">Others</option>
+					</select>
+				</div>
+				</div>
+
+				<div id="make_others" class="d-none row form">
+					<div class="col-md-12 pb-2">
+						<div class="form-outline">
+						<label class="form-label" for="phoneNumber">Others, please specify:</label>
+						<input type="tel" id="phoneNumber" class="form-control form-control-lg input_text" placeholder="Enter Make"/>
+						</div>
+					</div>
+				</div>
+
+
+					<div class="row form">
+					<div class="col-md-12 pb-2">
+
+					  <div class="form-outline">
+						<label class="form-label" for="phoneNumber">Model</label>
+						<input type="tel" id="phoneNumber" class="form-control form-control-lg input_text" placeholder="Enter Model"/>
+					  </div>
+
+					</div>
+				  </div>
+
+				  	<div class="row form">
+					<div class="col-md-12 pb-2">
+
+					  <div class="form-outline">
+						<label class="form-label" for="phoneNumber">Serial No.</label>
+						<input type="tel" id="phoneNumber" class="form-control form-control-lg input_text" placeholder="Enter Serial No."/>
+					  </div>
+
+					</div>
+				  </div>
+
+					<div class="mt-4 pt-2 text-right">
+					  <input class="btn btn-primary px-4" type="submit" value="Submit" />
+					  <a href="./tasklist_scrap_details.html" class="btn btn-primary px-4">Cancel</a>
+					</div>
+  
+				  </form>
+				</div>
+			  </div>
+
         </div>
 
-      </form> 
-</body>
+
+
+	<!-- js from homepage -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- js from table -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+
+	<script>
+		$( document ).ready(function() { //wait until body loads
+				
+				$("#make_dropdown").change(function(){ //when the rating changes
+					let selectedMake = $('#make_dropdown').find(":selected").text()
+					console.log(selectedMake);
+					
+					let value = this.value;
+					if (value=="others") {
+						console.log("do something");
+						$("#make_others").removeClass("d-none");
+					}else {
+						$("#make_others").addClass("d-none");
+					}
+				});	
+				
+		});
+	</script>
+	</body>
 </html>
+
