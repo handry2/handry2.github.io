@@ -22,7 +22,7 @@
 					</div>
 				</div>
 				<div style="padding-top:18px" class="col-lg-1 offset-lg-1 col-3">
-					<a class="matching_item matching_true btn btn-xs" data-toggle="modal" data-target="#viewUploadedPhoto" href="#">✓</a>
+					<a class="matching_item matching_true btn btn-xs" data-toggle="modal" onclick="changeModalContent1()" data-target="#viewUploadedPhoto" href="#">✓</a>
 				</div>
 				<div class="col-1"></div>
 			</div>
@@ -149,7 +149,7 @@
 					  </div>
 				  </div>
 				  <div style="padding-top:18px" class="col-lg-1 offset-lg-1 col-3">
-					  <a class="matching_item matching_true btn btn-xs" data-toggle="modal">✓</a>
+					<a class="matching_item matching_false btn btn-xs" data-toggle="modal" onclick="changeModalContent2()" data-target="#viewUploadedPhoto" href="#">×</a>
 				  </div>
 				  <div class="col-1"></div>
 			  </div>
@@ -158,3 +158,12 @@
 		  </div>
   
 	</div>
+
+<script>
+	function changeModalContent1() {
+			$("#iframe_upload_photo").attr("src", "./uploaded_photo_access.html");
+	}
+	function changeModalContent2() {
+		$("#iframe_upload_photo").attr("src", "./upload_rru_02.html");
+	}
+</script>

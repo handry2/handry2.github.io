@@ -2695,13 +2695,17 @@ input[type="button"].btn-block {
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
-  border: 0; }
+  border: 0;
+  letter-spacing: 2px;
+  font-size: 11px !important;
+
+}
   .dropdown-item:hover, .dropdown-item:focus {
     color: #16181b;
     text-decoration: none;
     background-color: #f8f9fa; }
   .dropdown-item.active, .dropdown-item:active {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.7) !important;
     text-decoration: none;
     background-color: #007bff; }
   .dropdown-item.disabled, .dropdown-item:disabled {
@@ -8256,7 +8260,9 @@ h1, h2, h3, h4, h5,
     border-radius: 4px; }
     .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
       font-size: 12px;
-      color: #000; }
+      color: #000; 
+    
+    }
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
         background: #ff0000;
         color: #fff; }
@@ -8719,27 +8725,34 @@ h2 {
     border-radius: 0px;
     background-color: var(--red);
     color: white;
-    width: 100px;
+    width: 50px;
     text-align: center;
-    height: 30px;
+    height: 25px;
     margin-top: 8px;
     margin-bottom: 30px;
+    padding: 0px;
+    font-size: 14px;
   }
 
   .card.btn-reuse {
     border-radius: 0px;
     background-color: var(--green);
     color: white;
-    width: 100px;
+    width: 50px;
     text-align: center;
-    height: 30px;
+    height: 25px;
     margin-top: 8px;
     margin-bottom: 30px;
+    font-size: 14px;
+
   }
 
   .warehouse-label {
 	  /*background-color: aquamarine;*/
 	  border-style: solid;
+    /* border-width: 1px; */
+    border: none;
+    height: 20px;
 	  border-radius: 10px;
 	  padding: 10px;
   }
@@ -8763,6 +8776,19 @@ h2 {
     color: slategrey;
   }
 
+  .search-classic {
+    /* border-color: #DCDCDC; */
+    border: none;
+    border: 1px;
+    border-radius: 0px;
+    font-size: 14px;
+    height:50px;
+    color: slategrey;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
   .status {
     margin-top:10px;
     font-weight: bold;
@@ -8780,10 +8806,9 @@ h2 {
     border-color: black;
   }
 
-  .nav_dropdown {
-    letter-spacing: 1.5px;
+  .nav-item {
+    color: white !important;
   }
-
   /* create new button css for tab */
   .btn-primary-tab {
   color: #fff;
