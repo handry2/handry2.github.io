@@ -196,7 +196,7 @@
                 column: {
                     stacking: 'normal',
                     dataLabels: {
-                        enabled: true,
+                        enabled: false,
                         color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
                         style: {
                             textShadow: '0 0 3px black'
@@ -278,55 +278,45 @@
 			document.getElementById("slaDecom").style.display = "block";
 			document.getElementById("slaScrap").style.display = "none";
 			document.getElementById("slaOEM").style.display = "none";
+			
+			document.getElementById("slaTDecom").style.display = "block";
+			document.getElementById("slaTScrap").style.display = "none";
+			document.getElementById("slaTOEM").style.display = "none";
+			
+			document.getElementById("decomTable").style.display = "block";
+			document.getElementById("scrapTable").style.display = "none";
+			document.getElementById("oemTable").style.display = "none";
 		};
 		
 		function enableSLAScrap() {
 			document.getElementById("slaDecom").style.display = "none";
 			document.getElementById("slaScrap").style.display = "block";
 			document.getElementById("slaOEM").style.display = "none";
+			
+			document.getElementById("slaTDecom").style.display = "none";
+			document.getElementById("slaTScrap").style.display = "block";
+			document.getElementById("slaTOEM").style.display = "none";
+			
+			document.getElementById("decomTable").style.display = "none";
+			document.getElementById("scrapTable").style.display = "block";
+			document.getElementById("oemTable").style.display = "none";
 		};
 		
 		function enableSLAOEM() {
 			document.getElementById("slaDecom").style.display = "none";
 			document.getElementById("slaScrap").style.display = "none";
 			document.getElementById("slaOEM").style.display = "block";
-		};
-		
-		function enableTSLADecom() {
-			document.getElementById("slaTDecom").style.display = "block";
-			document.getElementById("slaTScrap").style.display = "none";
-			document.getElementById("slaTOEM").style.display = "none";
-		};
-		
-		function enableTSLAScrap() {
-			document.getElementById("slaTDecom").style.display = "none";
-			document.getElementById("slaTScrap").style.display = "block";
-			document.getElementById("slaTOEM").style.display = "none";
-		};
-		
-		function enableTSLAOEM() {
+			
 			document.getElementById("slaTDecom").style.display = "none";
 			document.getElementById("slaTScrap").style.display = "none";
 			document.getElementById("slaTOEM").style.display = "block";
-		};
-		
-		function enableTDecom() {
-			document.getElementById("decomTable").style.display = "block";
-			document.getElementById("scrapTable").style.display = "none";
-			document.getElementById("oemTable").style.display = "none";
-		};
-		
-		function enableTScrap() {
-			document.getElementById("decomTable").style.display = "none";
-			document.getElementById("scrapTable").style.display = "block";
-			document.getElementById("oemTable").style.display = "none";
-		};
-		
-		function enableTOEM() {
+			
 			document.getElementById("decomTable").style.display = "none";
 			document.getElementById("scrapTable").style.display = "none";
 			document.getElementById("oemTable").style.display = "block";
 		};
+		
+
 		
 		
 		
@@ -347,6 +337,18 @@
 	<div class="container">
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
+				
+				<div class="btn-group mb-2" data-toggle="buttons">
+											<label onClick="enableSLADecom()" class="btn btn-primary-tab tab active">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option1" checked>Decom
+											</label>
+											<label onClick="enableSLAScrap()" class="btn btn-primary-tab tab">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option2">Scrap
+											</label>
+											<label onClick="enableSLAOEM()" class="btn btn-primary-tab tab">
+											  <input style="visibility: hidden;" type="radio" name="options" id="option2">OEM
+											</label>
+										  </div>
                     <!-- ============================================================== -->
                     <!-- pageheader  -->
                     <!-- ============================================================== -->
@@ -373,17 +375,7 @@
                                     </div>
                                     <div class="card-body">
 
-										  <div class="btn-group" data-toggle="buttons">
-											<label onClick="enableSLADecom()" class="btn btn-primary-tab tab active">
-											  <input style="visibility: hidden;" type="radio" name="options" id="option1" checked>Decom
-											</label>
-											<label onClick="enableSLAScrap()" class="btn btn-primary-tab tab">
-											  <input style="visibility: hidden;" type="radio" name="options" id="option2">Scrap
-											</label>
-											<label onClick="enableSLAOEM()" class="btn btn-primary-tab tab">
-											  <input style="visibility: hidden;" type="radio" name="options" id="option2">OEM
-											</label>
-										  </div>
+										  
 
                                         <div id="slaDecom" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 										<div id="slaScrap" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
@@ -398,17 +390,7 @@
                                     <h5 class="card-header">SLA by Team</h5>
                                     <div class="card-body p-0">
 									
-										<div class="btn-group" data-toggle="buttons">
-											<label onClick="enableTSLADecom()" class="btn btn-primary-tab tab active">
-											  <input style="visibility: hidden;" type="radio" name="options" id="option1" checked>Decom
-											</label>
-											<label onClick="enableTSLAScrap()" class="btn btn-primary-tab tab">
-											  <input style="visibility: hidden;" type="radio" name="options" id="option2">Scrap
-											</label>
-											<label onClick="enableTSLAOEM()" class="btn btn-primary-tab tab">
-											  <input style="visibility: hidden;" type="radio" name="options" id="option2">OEM
-											</label>
-										  </div>
+										
 										  
                                         <div id="slaTDecom" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 										<div id="slaTScrap" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
@@ -434,17 +416,7 @@
                                     <h5 class="card-header">Team SLA Overview</h5>
                                     <div class="card-body p-0">
 									
-									<div class="btn-group" data-toggle="buttons">
-											<label onClick="enableTDecom()" class="btn btn-primary-tab tab active">
-											  <input style="visibility: hidden;" type="radio" name="options" id="option1" checked>Decom
-											</label>
-											<label onClick="enableTScrap()" class="btn btn-primary-tab tab">
-											  <input style="visibility: hidden;" type="radio" name="options" id="option2">Scrap
-											</label>
-											<label onClick="enableTOEM()" class="btn btn-primary-tab tab">
-											  <input style="visibility: hidden;" type="radio" name="options" id="option2">OEM
-											</label>
-									</div>
+									
                                         <div id="decomTable" class="table-responsive">
                                             <table class="table">
                                                 <thead class="bg-light">
