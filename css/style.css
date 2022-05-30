@@ -8839,3 +8839,15 @@ h2 {
     .show > .btn-primary-tab.dropdown-toggle:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgb(238, 238, 238, 0.5);
       box-shadow: 0 0 0 0.2rem rgb(238, 238, 238, 0.5); }
+
+  input[type="radio"]:disabled {
+    -webkit-appearance: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 0px;
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    background-color: lightgrey;
+    border-radius: 50%;
+  }
