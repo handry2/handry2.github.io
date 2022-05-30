@@ -8264,7 +8264,10 @@ h1, h2, h3, h4, h5,
     
     }
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
-        background: #ff0000;
+        /* background: green; */
+        border-bottom: 1px solid;
+        border-color: #ff0000;
+        background: black;
         color: #fff; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
@@ -8777,10 +8780,10 @@ h2 {
   }
 
   .search-classic {
-    /* border-color: #DCDCDC; */
     border: none;
-    border: 1px;
-    border-radius: 0px;
+    border: 1px solid;
+    border-radius: 1px;
+    border-color: #DCDCDC;
     font-size: 14px;
     height:50px;
     color: slategrey;
@@ -8809,6 +8812,7 @@ h2 {
   .nav-item {
     color: white !important;
   }
+
   /* create new button css for tab */
   .btn-primary-tab {
   color: #fff;
