@@ -43,7 +43,7 @@
 										</div>
 									</div>
 									<div class="col-12 pt-2">
-										<a data-toggle="modal" data-target="#viewUploadedPhoto" href="#">&#x1f441</a>
+										<a data-toggle="modal" onclick="changeModalContent1();" data-target="#viewUploadedPhoto" href="#">&#x1f441</a>
 										&#10006
 									</div>
 								</div>
@@ -101,7 +101,7 @@
 										</div>
 									</div>
 									<div class="col-12 pt-2">
-										<a data-toggle="modal" data-target="#viewUploadedPhoto" href="#">&#x1f441</a>
+										<a data-toggle="modal" onclick="changeModalContent2();" data-target="#viewUploadedPhoto" href="#">&#x1f441</a>
 										&#10006
 									</div>
 								</div>
@@ -109,7 +109,7 @@
 							<div class="col-lg-12 pt-2">
 							<div class="form-group">
 								<div class="form-field">
-									<input type="text" style="width: 100%;" class="search_bar form-control" placeholder="Enter Remark">
+									<input type="text" style="width: 100%;" class="search_bar form-control" placeholder="Enter Remark" value="Missing antenna 2">
 								</div>
 							</div>
 							</div>
@@ -265,3 +265,13 @@
 	</div>
 
 </div>
+
+
+<script>
+	function changeModalContent1() {
+			$("#iframe_upload_photo").attr("src", "./upload_photo_access_decom.html");
+	}
+	function changeModalContent2() {
+		$("#iframe_upload_photo").attr("src", "./upload_photo_access_decom_2.html");
+	}
+</script>
