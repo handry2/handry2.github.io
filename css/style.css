@@ -3523,6 +3523,11 @@ input[type="button"].btn-block {
   background: no-repeat center center;
   background-size: 100% 100%; }
 
+
+@media (min-width: 150px) {
+	.app-header__logo	 {
+      display: none !important;}	
+}
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid {
@@ -3559,7 +3564,9 @@ input[type="button"].btn-block {
       -ms-flex-preferred-size: auto;
       flex-basis: auto; }
     .navbar-expand-sm .navbar-toggler {
-      display: none; } }
+      display: none; }
+	.app-header__logo	 {
+      display: none !important;}	  }
 
 @media (max-width: 767.98px) {
   .navbar-expand-md > .container,
@@ -3597,7 +3604,9 @@ input[type="button"].btn-block {
       -ms-flex-preferred-size: auto;
       flex-basis: auto; }
     .navbar-expand-md .navbar-toggler {
-      display: none; } }
+      display: none; }
+	.app-header__logo	 {
+      display: none !important;}	  }
 
 @media (max-width: 991.98px) {
   .navbar-expand-lg > .container,
@@ -3635,7 +3644,12 @@ input[type="button"].btn-block {
       -ms-flex-preferred-size: auto;
       flex-basis: auto; }
     .navbar-expand-lg .navbar-toggler {
-      display: none; } }
+      display: none; }
+	.app-header__logo_2	 {
+      display: none !important;}
+	  .app-header__logo	 {
+      display: block !important;}
+	  }
 
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,
@@ -8851,3 +8865,64 @@ h2 {
     background-color: lightgrey;
     border-radius: 50%;
   }
+  
+  	  .closed-sidebar.closed-sidebar-mobile .app-sidebar .app-header__logo, .closed-sidebar.closed-sidebar-mobile .app-header .app-header__logo {
+    width: auto;
+    display: flex;
+}
+
+.app-theme-white.fixed-header .app-header__logo {
+    background: rgba(250,251,252,.1);
+}
+
+.fixed-header .app-header .app-header__logo {
+    visibility: visible;
+}
+
+
+
+.app-header__logo {
+    padding: 0 1.5rem;
+    height: 60px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    transition: width .2s;
+}
+
+.app-header__logo .logo-src {
+    height: 38px;
+    width: 106px;
+    background: url(../images/Indosat_Ooredoo_Hutchison.svg.png);
+	background-repeat: no-repeat;
+	background-size: 106px 38px;
+	align-items: center;
+}
+
+
+.app-theme-white.fixed-header .app-header__logo_2 {
+    background: rgba(250,251,252,.1);
+}
+
+.fixed-header .app-header .app-header__logo_2 {
+    visibility: visible;
+}
+
+
+
+.app-header__logo_2 {
+    padding: 0 1.5rem;
+    height: 60px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    transition: width .2s;
+}
+
+.app-header__logo_2 .logo-src_2 {
+    height: 38px;
+    width: 106px;
+    background: url(../images/Indosat_Ooredoo_Hutchison.svg.png);
+	background-repeat: no-repeat;
+	background-size: 106px 38px;
+}
