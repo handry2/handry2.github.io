@@ -39,11 +39,7 @@
                         cx: 0.5,
                         cy: 0.3,
                         r: 0.7
-                    },
-                    stops: [
-                        [0, color],
-                        [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
-                    ]
+                    }
                 };
             });
 			
@@ -123,7 +119,8 @@
                     }
                 ]
             }]
-            $('#slaDecom').highcharts({
+            //$('#slaDecom').highcharts({
+			Highcharts.chart('slaDecom', {
                 chart:chartype,
                 title: chartitle,
                 tooltip: chartooltip,
@@ -132,7 +129,8 @@
 				colors: colors
             });
 			
-			 $('#slaScrap').highcharts({
+			 //$('#slaScrap').highcharts({
+			 Highcharts.chart('slaScrap', {
                 chart:chartype,
                 title: chartitle2,
                 tooltip: chartooltip,
@@ -141,7 +139,8 @@
 				colors: colors
             });
 			
-			$('#slaOEM').highcharts({
+			//$('#slaOEM').highcharts({
+			Highcharts.chart('slaOEM', {
                 chart:chartype,
                 title: chartitle3,
                 tooltip: chartooltip,
